@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState, Suspense} from 'react';
 import './App.css';
 import Footer from "./Footer.js";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import Home from "./Home.js";

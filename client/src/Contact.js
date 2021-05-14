@@ -118,8 +118,7 @@ export default class Contact extends Component {
                                     </div>
                                 </div>
                                 {/* Prefix */}
-                                
-                                    <div className="form-row">
+                                    <div className="row">
                                         <div className="form-group col-md-2">
                                             <label htmlFor="title">Title</label>
                                             <select id="title" className="form-control">
@@ -156,7 +155,7 @@ export default class Contact extends Component {
                                         </div>
                                     </div>
                                     {/* Phone Number */}
-                                    <div className="form-row">
+                                    <div className="row">
                                         <div className="form-group col-md-4">
                                             <label htmlFor="phoneNumber">Phone Number</label>
                                             <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"
