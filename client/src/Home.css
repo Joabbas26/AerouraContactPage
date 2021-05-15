@@ -554,11 +554,11 @@ Media quieries for tablets/medium devices
 /* =======================================
 Media quieries for computers/larger displays 
 ==================================*/
-@media only screen and (min-width: 1025px) and (max-width:1440px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
      /* Social media bar */
      #sidePanel {
         position: fixed;
-        top: 35.3%;
+        top: 35.1%;
     }
 
     /* Active slide */
@@ -604,10 +604,11 @@ Media quieries for computers/larger displays
 Media quieries for extra large displays  
 ==================================*/
 @media only screen and (min-width: 1441px) {
-    /* Icons section */
-    .iconBarActive {
-        top: 20%;
-      }
+     /* Social media bar */
+     #sidePanel {
+        position: fixed;
+        top: 100%;
+    }
       
     /* Description Boxes */
     .descriptionBoxes {

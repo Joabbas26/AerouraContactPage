@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useRef, useState, Suspense} from 'react';
 import './App.css';
-import Footer from "./Footer.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import Home from "./Home.js";
 import About from "./About.js";
 import Contact from "./Contact.js";
+import Footer from "./Footer.js";
 /*import Community from "./Community.js";*/
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
