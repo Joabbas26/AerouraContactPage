@@ -9,8 +9,8 @@ import Contact from "./Contact.js";
 import Footer from "./Footer.js";
 /*import Community from "./Community.js";*/
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
-import i18n from "i18next";
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import i18n from "../src/i18n.js";
 import { useTranslation } from "react-i18next";
 import WebFont from 'webfontloader';
 
@@ -26,7 +26,7 @@ function App() {
      }, []);
 
     // Set and change languages
-    const { i18n, t } = useTranslation();
+    const { i18n } = useTranslation();
     const [currentLanguage, setCurrentLanguage] = useState('en');
 
     const changeLanguage = (lang) => {

@@ -607,7 +607,7 @@ Media quieries for extra large displays
      /* Social media bar */
      #sidePanel {
         position: fixed;
-        top: 100%;
+        top: 30%;
     }
       
     /* Description Boxes */
