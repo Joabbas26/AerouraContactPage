@@ -1,0 +1,634 @@
+/* ===============================
+    Landing Page Image section 
+==================================*/
+.landingPage {
+    width: 100%;
+    height: 60vh;
+}
+
+/* Background image on landing page */
+.landingPageBackground {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: inherit;
+}
+
+/* Text positioning on Landing Page Image */
+.text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+    width: max-content;
+}
+
+/* Top Text on Landing Page Image */
+.title {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Bottom Text on Landing Page Image */
+.subTitle {
+    font-size: 30px;
+    color: white;
+}
+
+/* ===============================
+    Side bar with icons 
+==================================*/
+/* Div with side bar and social media */
+.socialMediaIcons {
+    position: fixed;
+    top: 45%;
+}
+
+/* Full side panel */
+#sidePanel {
+    z-index: 2;
+    position: fixed;
+    top: 34.5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    border-radius: 0 5px 0 0;
+    padding-right: 14px;
+}
+
+#sidePanel:hover {
+    background-color: rgb(236, 236, 241);
+    border-radius: 0 5px 0 0;
+}
+
+/* Only icons in side panel */
+.iconBarActive {
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    transition: cubic-bezier(0, .52, 0, 1) transform .3s ;
+  }
+
+  /* Style the icon bar links */
+  .iconBarActive a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(0, 119, 255);
+    z-index: initial;
+  }
+
+  .iconBarActive a:hover {
+    background-color: rgb(10, 173, 248);
+  }
+
+  /* Individual icons*/
+  .facebook {
+    font-size: 40px;
+    background: transparent;
+    color: #3B5998;
+    
+  }
+
+  .twitter {
+    font-size: 40px;
+    background: #55ACEE;
+    color: white;
+
+  }
+
+  .instagram {
+    font-size: 40px;
+    background: transparent;
+    color: #DD2A7B;
+  }
+
+  .linkedin {
+    font-size: 40px;
+    background: transparent;
+    color: #007bb5;
+  }
+
+/* ===============================
+    Description boxes section 
+==================================*/
+/* Section with slideshow and travel counselor */
+.descriptionBoxes {
+    padding: 0 50px 0 50px;
+    background-color: rgb(0, 95, 105);
+}
+
+/* Div with slide show */
+.PlacesToSee {
+    background-color: #f2f0e6;
+    margin: 40px 10px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Div with slide show Title */
+.PlacesToSee h4 {
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+/* Carousel Buttons */
+.carousel-control-prev, .carousel-control-next {
+    border: 0px white solid;
+    background-color: transparent;
+}
+
+/* Captions in slide show */
+.slideTitle {
+    padding-bottom: 10vh;
+    overflow: hidden;
+}
+
+/* ===============================
+    Travel Counselor section 
+==================================*/
+#TravelCounselor {
+    background-color: #f2f0e6;
+    height: 350px;
+    margin: 40px 10px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+/* Travel counselor contact info */
+.ContactInfo {
+    margin: 4%;
+    padding: 10px 0 0 0;
+}
+
+/* Travel counselor heading */
+.ContactInfo h1{
+    margin-bottom: 20px;
+}
+
+/* Travel counselor subtext */
+.ContactInfo p{
+    font-size: 1.2rem;
+}
+
+/*Button to schedule a meeting */
+#scheduleBtn {
+    padding: 5px;
+    float: right;
+    margin: 90px 0 0 0;
+}
+
+/* ===============================
+    Plan Your Trip Info section 
+==================================*/
+/* Plan Your Trip Div */
+#PlanTrip {
+    background-color: #f2f0e6;
+    height: 350px;
+    margin: 40px 10px;
+    border-radius: 10px;
+    padding: 0;
+}
+
+/* Plan Your Trip Information*/
+.planYourTrip {
+    padding: 10px 0 10px 10px;
+    margin: 4%;
+}
+
+/* Plan Your Trip subtitle */
+.planYourTrip p {
+    font-size: 1.2rem;
+}
+
+/* Plan Your Trip checkbox labels */
+.planYourTrip label {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+/* Plan Your Trip title */
+.TitleIcon {
+    margin-bottom: 20px;
+}
+
+/* Plan Your Trip Join Here button */
+.joinButton {
+    padding: 15px;
+    float: right;
+    margin: 10px 0 0 0;
+}
+
+/* ===============================
+    Travel Banner section 
+==================================*/
+/* Travel banner div */
+.travelBanner {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    background-color: #f2f0e6;
+}
+
+/* Travel banner background image */
+.travelBannerBackground {
+    background-repeat: no-repeat;
+    opacity: .6;
+    width: 98%;
+    transform: translate(1%, 5%);
+    height: 35vh;
+    overflow: hidden;
+    margin-bottom: 3%;
+    object-fit: cover;
+}
+
+/* Travel banner text */
+.travelBannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgb(0, 95, 105);
+    width: max-content;
+}
+
+/* ===============================
+    Specialize boxes section 
+==================================*/
+.SpecializeBoxes {
+    background-color: rgb(0, 95, 105);
+    text-align: center;
+    padding: 10px 50px 10px 50px;
+    width: 100%;
+}
+
+/* Each individual box section */
+.box {
+    background-color: #f2f0e6;
+    margin: 10px 5px;
+    text-align: start;
+    height: 90%;
+}
+
+/* Each image inside the boxes */
+.box img {
+    width: 100%;
+}
+
+/* Text inside the boxes */
+.descriptionText {
+    padding: 10px;
+}
+
+/* Heading text inside the boxes */
+.headingText {
+    color: white;
+}
+
+/* ===============================
+    Scroll to Top Button
+==================================*/
+.scrollTop {
+  position: absolute;
+  bottom: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  margin-left: 50%;
+  }
+  
+  .scrollTop:hover{
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+/* ===============================
+Media quieries for small devices 
+==================================*/
+@media only screen and (max-width: 600px) {
+    /* Landing Page Image section */
+    .landingPage {
+        background-size: 100% 50vh;
+        width: 100%;
+        height: 50vh;
+    }
+
+    /* Text positioning on Landing Page Image */
+    .text {
+        height: 40vh;
+    }
+
+    /* Top Text on Landing Page Image */
+    .title {
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Bottom Text on Landing Page Image */
+    .subTitle {
+        font-size: 20px;
+        color: white;
+    }
+
+    /*====================================
+    Social Media Bar Section 
+    ===================================== */
+    /* Full side panel */
+    #sidePanel {
+        position: fixed;
+        top: 33.4%;
+    }
+
+    /*====================================
+    Description Boxes Section 
+    ===================================== */
+    .descriptionBoxes {
+        padding: 0;
+    }
+
+    /* Div with slide show */
+    .PlacesToSee {
+        margin: 10px;
+        height: auto;
+    }
+
+    /* Slideshow captions */
+    .slideTitle {
+        z-index: 10;
+        padding-bottom: 0;
+    }
+
+    /* Travel couselor section */
+    #TravelCounselor {
+        margin: 10px;
+    }
+
+    /* Schedule an appointment button */
+    #scheduleBtn {
+        padding: 5px;
+        font-size: 16px;
+        margin: 60px 0 0 0;
+    }
+
+    /* Plan Your Trip section */
+    #PlanTrip {
+        margin: 10px;
+    }
+
+    /* Join here button */
+    .joinButton {
+        padding: 0;
+        margin: 20% 0 0 0;
+    }
+
+   /*====================================
+     Travel banner bottom padding on small devices
+    ===================================== */
+    .travelBanner {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    /* Travel banner background image */
+    .travelBannerBackground {
+        background-repeat: no-repeat;
+        opacity: .5;
+        width: 98%;
+        transform: translate(1%, 5%);
+        height: 25vh;
+    }
+
+    /* Travel banner text */
+    .travelBannerText {
+        font-size: 40px;
+    }
+
+    /* Specialization Boxes */
+    .SpecializeBoxes {
+        padding: 0;
+    }
+
+}
+
+/* =======================================
+Media quieries for tablets/medium devices 
+========================================== */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    /* Social media bar */
+    #sidePanel {
+        position: fixed;
+        top: 33.5%;
+    }
+
+    /* Div with slide show */
+    .PlacesToSee {
+        margin: 10px;
+    }
+
+    /* Slideshow captions */
+    .slideTitle {
+        font-size: 30px;
+    }
+
+    /* Travel couselor section */
+    #TravelCounselor {
+        margin: 10px;
+    }
+
+    /* Schedule an appointment button */
+    #scheduleBtn {
+        padding: 5px;
+        font-size: 16px;
+        margin: 70px 0 0 0;
+    }
+
+    /* Plan Your Trip section */
+    #PlanTrip {
+        margin: 10px;
+    }
+
+    /* Join here button */
+    .joinButton {
+        padding: 0;
+        margin: 50px 0 0 0;
+    }
+
+    /* Travel banner text */
+    .travelBannerText {
+        font-size: 7rem;
+    }
+
+    /* Section with specialization */
+    .SpecializeBoxes {
+        padding: 10px;
+    }
+
+}
+
+/* =======================================
+Media quieries for tablets/medium devices 
+========================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Social media bar */
+    #sidePanel {
+        position: fixed;
+        top: 33.5%;
+    }
+
+    /* Description Boxes */
+    .descriptionBoxes {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active slide */
+    .carousel-item.active {
+        width: 460px;
+        transform: translate(-10%)
+    }
+
+    /* Slideshow captions */
+    .slideTitle {
+        padding-bottom: 10px;
+        transform: translate(-10%)
+    }
+    
+    /* Button to schedule an appointment */
+    #scheduleBtn {
+        margin: 70px 0 0 0;
+    }
+
+    /* Button to aeroura voyage */
+    .joinButton {
+        padding: 0;
+        margin: 50px 0 0 0;
+    }
+
+    /* Travel banner text */
+    .travelBannerText {
+        font-size: 7rem;
+    }
+
+    /* Section with specifications */
+    .SpecializeBoxes {
+        padding: 10px;
+    }
+}
+
+/* =======================================
+Media quieries for computers/larger displays 
+==================================*/
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+     /* Social media bar */
+     #sidePanel {
+        position: fixed;
+        top: 35.1%;
+    }
+
+    /* Active slide */
+    .carousel-item.active {
+        width: 460px;
+        transform: translate(-10%)
+    }
+
+    /* Description Boxes */
+    .descriptionBoxes {
+        padding: 0 110px 0 90px;
+        margin: 0;
+    }
+
+    /* Slideshow captions */
+    .slideTitle {
+        padding: 0;
+    }
+
+    /* Button to schedule appointmetnt */
+    #scheduleBtn {
+        margin: 70px 0 0 0;
+    }
+
+    /* Button to aeroura voyage */
+    .joinButton {
+        padding:0;
+        margin: 50px 0 0 0;
+    }
+
+    /* Travel Banner */
+    .travelBanner {
+        margin: 0 80px 0 80px;
+        width: auto;
+    }
+
+    /* Travel Banner Text*/
+    .travelBannerText {
+        font-size: 4.5em;
+    }
+}
+/* ===============================
+Media quieries for extra large displays  
+==================================*/
+@media only screen and (min-width: 1441px) {
+     /* Social media bar */
+     #sidePanel {
+        position: fixed;
+        top: 30%;
+    }
+      
+    /* Description Boxes */
+    .descriptionBoxes {
+        margin: 0;
+    }
+
+    /* Button to aeroura voyage */
+    .joinButton {
+        padding:0;
+        margin: 70px 0 0 0;
+    }
+
+    /* Travel Banner */
+    .travelBanner {
+        margin: 0;
+        width: auto;
+    }
+
+    /* Specialize Boxes */
+    .SpecializeBoxes {
+        margin: 0;
+    }
+}
