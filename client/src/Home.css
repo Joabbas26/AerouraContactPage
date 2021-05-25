@@ -311,7 +311,6 @@
     Scroll to Top Button
 ==================================*/
 .scrollTop {
-  position: absolute;
   bottom: 20px;
   z-index: 1000;
   cursor: pointer;
@@ -607,7 +606,7 @@ Media quieries for extra large displays
      /* Social media bar */
      #sidePanel {
         position: fixed;
-        top: 30%;
+        top: 34.5%;
     }
       
     /* Description Boxes */

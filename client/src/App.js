@@ -78,7 +78,7 @@ function App() {
     <span className="homeLink"><NavLink to="/" activeClassName="active" style={{textDecoration: 'none'}}
       >AEROURA TRAVEL</NavLink>
     </span>
-      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+      <ul className="navbar-nav">
       <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
       <li className="nav-item"><Link to="/contact" style={{textDecoration: 'none'}}>Contact</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
@@ -86,13 +86,12 @@ function App() {
     </ul>
 
      {/* Dropdown section */}
-   <div className="dropdown">
+  <div className="dropdownSection">
      {/* Icon that handles Dropdown */}
       <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
        onClick={handleShowDropDown} aria-expanded="false" ref={myRef}>
         <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} id="icon" />
       </button>
-
     {/* Dropdown Menu content */}
       {showDropDown ?
       <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
@@ -100,7 +99,8 @@ function App() {
           <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
       </div> 
       : null}
-    </div>  
+    </div>
+      
   </div>
 </nav>
 
