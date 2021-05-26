@@ -9,7 +9,7 @@ import Contact from "./Contact.js";
 import Footer from "./Footer.js";
 /*import Community from "./Community.js";*/
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import WebFont from 'webfontloader';
 
@@ -108,11 +108,10 @@ function App() {
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
           <Switch>
-            <Route exact path= "/">
-    
-            <Home/>
 
-            </Route>
+          <Route exact path = "/" component={Home}/>
+    
+            <Route exact path = "/" component={Home}/>
             
             <Route path="/about" component={About}/> 
 
@@ -135,3 +134,13 @@ function App() {
       }
 
 export default App;
+
+/* 
+
+ ============== Test if the top code doesnt work =======================
+
+<Route exact path ='/' render={() => <Home/>}/>
+
+<Route exact path ='/' component={<Home}/>
+
+*/

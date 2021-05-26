@@ -60,10 +60,10 @@ function About() {
             </button> 
             {/* Social media icons in side panel */}
             <div className="iconBarActive" style={iconBarStyle}>
-                <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
-                <a href="twitter.com"><FaTwitter className="twitter"/></a>
-                <a href="instagram.com"><FaInstagram className="instagram"/></a>
-                <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
+                <a href="https://www.facebook.com/Aeroura"><FaFacebookSquare className="facebook"/></a>
+                <a href="https://twitter.com/Aeroura_Travel"><FaTwitter className="twitter"/></a>
+                <a href="https://www.instagram.com/aeroura_travel/"><FaInstagram className="instagram"/></a>
+                <a href="https://www.linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
             {/* Landing Page Image and text */}
             <div className="aboutLandingPage">

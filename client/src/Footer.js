@@ -14,7 +14,7 @@ export default class Footer extends Component {
               <ul className="footerList">
                 {/* Links to legal page */}
                 <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
-                <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
+                <a href="https://www.facebook.com/Aeroura"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
                 <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></a>
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
@@ -23,10 +23,10 @@ export default class Footer extends Component {
             <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="footerIcons">
               <div className="icons">
               {/* Individual Footer Icons */}
-                  <a href="facebook.com"><FaFacebookSquare className="footer-icons"/></a>
-                  <a href="twitter.com"><FaTwitter className="footer-icons"/></a>
-                  <a href="instagram.com"><FaInstagram className="footer-icons"/></a>
-                  <a href="linkedin.com"><FaLinkedin className="footer-icons"/></a>
+                  <a href="https://www.facebook.com/Aeroura"><FaFacebookSquare className="footer-icons"/></a>
+                  <a href="https://twitter.com/Aeroura_Travel"><FaTwitter className="footer-icons"/></a>
+                  <a href="https://www.instagram.com/aeroura_travel/"><FaInstagram className="footer-icons"/></a>
+                  <a href="https://www.linkedin.com"><FaLinkedin className="footer-icons"/></a>
               </div>
             </div>
           </div>
