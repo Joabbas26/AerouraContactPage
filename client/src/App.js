@@ -6,6 +6,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import About from "./About.js";
 import Home from "./Home.js";
 import Contact from "./Contact.js";
+import Legal from "./Legal.js";
 import Footer from "./Footer.js";
 /*import Community from "./Community.js";*/
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -109,15 +110,15 @@ function App() {
         {/* Contains website data in multiple routes */}
           <Switch>
 
-          <Route exact path = "/" component={Home}/>
+         
     
-            <Route exact path = "/" component={Home}/>
+          <Route exact path = "/" render={() => <Home/>}/>
             
             <Route path="/about" component={About}/> 
 
             <Route path="/contact" component={Contact}/>
-
-            {/* <Route path="/legal" component={Legal} /> */}
+            
+            <Route path="/legal" component={Legal} />
 
               {/* <Route path="/community" component={Community} /> */}
              {/* This gives an error  <Route component={Error} /> */}
@@ -134,13 +135,3 @@ function App() {
       }
 
 export default App;
-
-/* 
-
- ============== Test if the top code doesnt work =======================
-
-<Route exact path ='/' render={() => <Home/>}/>
-
-<Route exact path ='/' component={<Home}/>
-
-*/

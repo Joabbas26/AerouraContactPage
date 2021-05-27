@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import "./Footer.css";
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
 
@@ -14,8 +15,8 @@ export default class Footer extends Component {
               <ul className="footerList">
                 {/* Links to legal page */}
                 <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
-                <a href="https://www.facebook.com/Aeroura"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
-                <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></a>
+                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></Link>
+                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></Link>
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
             </div>
