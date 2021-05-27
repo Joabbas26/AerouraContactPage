@@ -3,6 +3,7 @@ const connectDB = require('./config/db');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 
 const app = express();
@@ -28,14 +29,14 @@ app.use('/api/forma', (req, res) => {
         service:'Gmail',
         port:465,
         auth:{
-            user:'DummytestEmail9@gmail.com',
-            pass:'kmtwxk5LWrcPHnp'
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
         }
     });
 
 let mailOptions={
     from:data.email,
-    to:'DummytestEmail9@gmail.com',
+    to: process.env.EMAIL,
     subject:`Message from ${data.name}`,
     html:`
         
@@ -46,6 +47,9 @@ let mailOptions={
         <li>Email: ${data.email}</li>
         <li>PhoneNumber: ${data.phonenumber}</li>
         </ul>
+
+        <h3>Message</h3>
+        <p>${data.message}</p>
         
     `
 };

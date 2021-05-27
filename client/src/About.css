@@ -1,0 +1,468 @@
+/* ===============================
+    Side bar with icons 
+==================================*/
+
+/* Full side panel */
+#sidePanel {
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    border-radius: 0 5px 0 0;
+    padding-right: 14px;
+}
+
+#sidePanel:hover {
+    background-color: rgb(227, 227, 230);
+    border-radius: 0 5px 0 0;
+}
+
+/* Only icons in side panel */
+.iconBarActive {
+    z-index: 2;
+    position: fixed;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    transition: cubic-bezier(0, .52, 0, 1) transform .3s ;
+  }
+
+  /* Style the icon bar links */
+  .iconBarActive a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(0, 119, 255);
+    z-index: initial;
+  }
+
+  .iconBarActive a:hover {
+    background-color: #000;
+  }
+
+  /* Individual icons*/
+  .facebook {
+    font-size: 40px;
+    background: transparent;
+    color: #3B5998;
+    
+  }
+
+  .twitter {
+    font-size: 40px;
+    background: #55ACEE;
+    color: white;
+
+  }
+
+  .instagram {
+    font-size: 40px;
+    background: transparent;
+    color: #DD2A7B;
+  }
+
+  .linkedin {
+    font-size: 40px;
+    background: transparent;
+    color: #007bb5;
+  }
+
+/* Landing page image for about page */
+.aboutLandingPage {
+    background-image: url('./Images/NYCsunrise.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}
+
+/* Landing page image background for about page */
+.aboutText {
+    background-color: rgba(109, 138, 109, 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+}
+
+/* Landing page image text for about page */
+.aboutTitle {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Section with company vision statement */
+#visionRow {
+    background-color: #f2f0e6;
+    height: auto;
+}
+
+/* Text for section with company vision statement */
+#visionText {
+    padding: 3%;
+    height: 50%;
+}
+
+/* Text heading in vision section */
+.visionHead {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Text sub heading in vision section */
+.visionSubHead {
+    font-size: 1.9em;
+}
+
+/* Image div in section with company vision statement */
+#visionImageDiv {
+    padding: 0;
+    margin: 0;
+    height: 50%;
+}
+
+/* Image in section with company vision statement */
+.visionImage {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+}
+
+/* Section with company mission statement */
+#missionRow {
+    background-color: rgb(0, 95, 105);
+}
+
+/* Text for section with company mission statement */
+#missionText {
+    padding: 2% 0 0 5%;
+    color: white;
+}
+
+/* Text heading in mission section */
+.missionHead {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Text sub heading in mission section */
+.missionSubHead {
+    font-size: 1.7em;
+    margin-bottom: 2em;
+}
+
+/* Image div in section with company mission statement */
+#missionImageDiv {
+    padding: 0;
+    margin: 0;
+}
+
+/* Image in section with company mission statement */
+.missionImage {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Section with company values */
+.ourValues {
+    background-color: #f2f0e6;
+    padding: 2% 0px 0px 2%;
+}
+
+/* Top section with company values */
+#values1 {
+    padding: 2% 0px 0px 2%;
+}
+
+/* Bottom section with company values */
+#values2 {
+    padding: 2% 0px 0px 2%;
+}
+
+/* Section with team member info */
+.adventurousTeam {
+    background-color: rgb(234, 235, 236);
+    padding: 1% 0 3% 0;
+}
+
+/* Title of section with team member info */
+.adventurousTeamTitle{
+    text-align: center;
+    padding: 1%;
+}
+
+/* Section with team member description */
+#teamText {
+    background-color:rgb(0, 95, 105);
+    border-radius: 5px;
+    color: white;
+    padding: 1%;
+    font-size: 1.1rem;
+}
+
+/* Team member image div */
+#imagePortrait {
+    position: relative;
+}
+
+.portraitImage {
+    width: 100%;
+    height: 20em;
+}
+
+/* Team member name on top of image */
+.imagePortaitText {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    color: white;
+}
+
+/* Arrow on top of team member image */
+.arrowIcon {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+}
+
+/* Positioning of additional image in team member section */
+#imageSection {
+    position: relative;
+    margin: 0;
+}
+
+/* Text on top of additional image in team member section */
+.imageText {
+    position: absolute;
+    bottom: 0%;
+    right: 8%;
+    color: white;
+    font-weight: bold;
+}
+
+/* Additional image in team member section */
+.image {
+    width: 100%;
+    height: 20em;
+}
+
+/* Section with specific team member info */
+#teamSectionRow {
+    margin-bottom: 1%;
+}
+
+/* Contact section */
+.contactUs {
+    background-color: rgb(226, 218, 218);
+    border-radius: 5px;
+    padding: 2%;
+
+}
+
+/* Contact us form */
+#contactUsRow {
+    padding: 2%;
+}
+
+/* Section with virtual hours */
+#virtualHoursSection {
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+}
+
+/* Section with specialist phone number */
+.phoneNumber {
+    color: red;
+    margin-top: 3%;
+}
+
+/* Call Specialist section */
+#callSpecialist {
+    padding: 1% 0 1% 0;
+}
+
+/* ===============================
+    Scroll to Top Button
+==================================*/
+.scrollTop {
+    position: fixed; 
+    width: 100px;
+    bottom: 20px;
+    align-items: center;
+    height: 20px;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    }
+    
+    .scrollTop:hover{
+      opacity: 1;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5;
+      }
+    }
+
+/*=========================
+Section for mobile devices
+===========================*/
+@media only screen and (max-width: 425px){
+    /*====================================
+    Social Media Bar Section 
+    ===================================== */
+    #sidePanel {
+        position: fixed;
+        top: 33.4%;
+    }
+
+  /* Adjust font size for about landing page text */  
+    .aboutTitle {
+        font-size: 12px;
+        }
+    
+    /* Vision section */
+    #visionRow {
+        height: 100%;
+    }
+
+    /* Text sub heading in vision section */
+    .visionSubHead{
+        font-size: 1.4em;
+        padding-left: 10px;
+    }
+
+    /* Text sub heading in mission section */
+    .missionSubHead{
+        font-size: 1.4em;
+    }
+
+    /* Actual in mission section image */
+    .missionImage {
+        width: 100%;
+        height: 90%;
+    }
+
+    /* Adventurous team section*/
+    .portraitImage {
+        height: 100%;
+    }
+
+    /* Scroll to top icon */
+    .arrowIcon {
+        visibility: hidden;
+    }
+
+    /* Info Text in team section */
+    #teamText {
+        font-size: .3em;
+        padding: 4%;
+    }
+
+    /* contact us section */ 
+    #contactUsRow {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/*=========================
+Section for medium devices
+===========================*/
+@media only screen and (min-width: 426px) and (max-width: 600px){
+/* Adjust font size for about landing page text */
+    .aboutTitle {
+        font-size: 20px;
+    
+        }
+    
+}
+
+/*=========================
+Section for larger screens
+===========================*/
+@media only screen and (min-width: 601px) and (max-width: 767px){
+/* Adjust font size for about landing page text */
+    .aboutTitle {
+        font-size: 30px;
+        }
+    
+    }
+
+/*=========================
+Section for large screens
+===========================*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+     /* Adjust font size for about landing page text */
+    .aboutTitle {
+        font-size: 30px;
+        }
+
+    /* Image for mission section */
+    .missionImage {
+        object-fit: cover;
+    }
+    
+    /* div containing vision section */
+     #visionRow {
+        height: 20em;
+    }
+
+    /* our values image */
+    #valuesImage {
+        height: 20em;
+    }
+
+    /* Our Adventurous Team Section */ 
+    #teamText {
+        font-size: .5em;
+    }
+
+    /* Center the contact form */
+    #contactUsRow {
+        transform: translate(20%, 0);
+    }
+    
+    /* Table content on the same row */
+    .table td {
+        padding: 0.46rem !important;
+    }
+}
+
+/*=========================
+Section for larger screens
+===========================*/
+@media only screen and (min-width: 1025px) {
+
+    /* Center the contact form */
+    #contactUsRow {
+        transform: translate(20%, 0);
+    }
+}
+
+/*=========================
+Section for extra large screens
+===========================*/
+@media only screen and (min-width: 1441px) { 
+    /* Button to open social media tab */
+    #sidePanel {
+        top: 39.7%;
+    }
+    
+    .arrowIcon {
+        left: 85%;
+    }
+}

@@ -3,34 +3,30 @@ import "./Footer.css";
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
 
 export default class Footer extends Component {
+  
     render() {
         return (
     <div className="main-footer">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-5">
+          {/* Footer List Items Section */}
+            <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
               <ul className="footerList">
-                <li>Aeroura Travel</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
+                {/* Links to legal page */}
+                <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
+                <a href="https://www.facebook.com/Aeroura"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
+                <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></a>
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
             </div>
-            <div className="col-md-5"></div>
-            <div className="col-md-2">
+            {/* Footer Icons Section */}
+            <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="footerIcons">
               <div className="icons">
-                  <FaFacebookSquare
-                    className="footer-icons"
-                    />
-                  <FaTwitter
-                  className="footer-icons"
-                  />
-                  <FaInstagram
-                  className="footer-icons"
-                  />
-                  <FaLinkedin
-                  className="footer-icons"
-                  />    
+              {/* Individual Footer Icons */}
+                  <a href="https://www.facebook.com/Aeroura"><FaFacebookSquare className="footer-icons"/></a>
+                  <a href="https://twitter.com/Aeroura_Travel"><FaTwitter className="footer-icons"/></a>
+                  <a href="https://www.instagram.com/aeroura_travel/"><FaInstagram className="footer-icons"/></a>
+                  <a href="https://www.linkedin.com"><FaLinkedin className="footer-icons"/></a>
               </div>
             </div>
           </div>
@@ -39,3 +35,8 @@ export default class Footer extends Component {
         )
     }
 }
+
+/*
+
+          
+*/
