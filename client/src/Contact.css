@@ -6,6 +6,7 @@
     padding: 10px;
     font-size: 1.3em;
     background-color: #f2f0e6;
+    border-radius: 10px;
 }
 
 /* Content in contact form */
@@ -41,7 +42,7 @@
 
 /* Contact form submit button */
 .submitButton {
-    float: right;
+    float: left;
     margin: 0 0 10px 0;
     width: 7rem;
     height: 3rem;
@@ -152,7 +153,7 @@ Media quieries for large screens
 @media screen and ( min-width: 1440px) and (max-width: 2559px){
     /* Adjust height of form when on larger screens */
     .virtualHours {
-        margin: 3% 10% 4.4% 10%;
+        margin: 2% 10% 3.8% 10%;
     } 
     
     /* Adjust the position of video icon */

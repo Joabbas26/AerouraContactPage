@@ -109,10 +109,8 @@ function App() {
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
           <Switch>
-
-         
     
-          <Route exact path = "/" render={() => <Home/>}/>
+          <Route path = "/" exact component={Home}/>
             
             <Route path="/about" component={About}/> 
 
@@ -121,7 +119,7 @@ function App() {
             <Route path="/legal" component={Legal} />
 
               {/* <Route path="/community" component={Community} /> */}
-             {/* This gives an error  <Route component={Error} /> */}
+             {/* This gives an error  <Route render={() => <h1>404: page not found</h1>} /> */}
           </Switch>
         
       </div>
@@ -135,3 +133,22 @@ function App() {
       }
 
 export default App;
+
+/**
+ * 
+ * Research if above doesnt work
+ * 
+ 
+import { useHistory } from "react-router-dom";
+
+const Contact = () => {
+const history = useHistory();
+return (
+  <Fragment>
+    <h1>Contact</h1>
+    <button onClick={() => history.push('/') } >Go to home</button>
+  </Fragment>
+  )
+  };
+  
+ */

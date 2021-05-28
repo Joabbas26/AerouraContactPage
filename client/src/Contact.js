@@ -121,7 +121,7 @@ export default class Contact extends Component {
                                     <div className="row">
                                         <div className="form-group col-md-2">
                                             <label htmlFor="title">Title</label>
-                                            <select id="title" className="form-control">
+                                            <select id="title" className="form-control" style={{ backgroundColor: 'white'}}>
                                              <option value>Choose...</option>
                                              <option>Mr.</option>
                                              <option>Mrs.</option>
@@ -166,7 +166,7 @@ export default class Contact extends Component {
                                         {/* Best time to call */}
                                         <div className="form-group col-md-4">
                                             <label htmlFor="callTime">Best Time To Call You</label>
-                                            <select id="callTime" className="form-control">
+                                            <select id="callTime" className="form-control" style={{ backgroundColor: 'white'}}>
                                              <option value>No Preference</option>
                                              <option>8am</option>
                                              <option>9am</option>
@@ -192,14 +192,22 @@ export default class Contact extends Component {
                                                 </textarea>
                                             </div>
                                     </div>
-                                    <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
-                                    <button type="submit" className="submitButton btn btn-primary">Submit</button>
-                                
+                                    {/* Submit button */}
+                                    <div className="row">
+                                        <div className="col">
+                                            <button type="submit" className="submitButton btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                    {/*  Line under this comment shows message only after form submit
+                                    <div className={this.state.sent ? 'msg msgAppear':'msg'}>Message has been sent</div>
+                                    */}
+                                    <div style={this.state.sent ? {} : { display: 'none' }}>Message has been sent</div>
+                                      
                                 {/* Disclaimer Section */}
-                                <p className="sub-text">
+                                <div className="row"><p className="sub-text">
                                 We ask you for your number so that one of our specialists can call or text you to discuss your travel plans. 
                                 Standard rates may apply. By submitting this form, you agree to us getting in touch with you in this way.
-                                </p>
+                                </p></div>
                                 {/* Disclaimer icon */}
                                 <div className="row" id="Disclaimer">
                                     <div className="col-md-1">
