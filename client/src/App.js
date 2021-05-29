@@ -10,7 +10,7 @@ import Legal from "./Legal.js";
 import Footer from "./Footer.js";
 /*import Community from "./Community.js";*/
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink, useHistory } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import WebFont from 'webfontloader';
 
@@ -33,6 +33,16 @@ function App() {
     const changeLanguage = (lang) => {
       setCurrentLanguage(i18n.changeLanguage(lang));
     }
+
+    //Use history to open Home component on startup
+    /** 
+    const history = useHistory();
+    useEffect(()=> {
+    Figure out how to run history.push('/') on page load
+      history.push('/');
+      
+      } ,[])
+    */
 
      // Used to hide dropdown on outside click
      const myRef = useRef();
@@ -134,21 +144,7 @@ function App() {
 
 export default App;
 
-/**
- * 
- * Research if above doesnt work
- * 
- 
-import { useHistory } from "react-router-dom";
+/*
 
-const Contact = () => {
-const history = useHistory();
-return (
-  <Fragment>
-    <h1>Contact</h1>
-    <button onClick={() => history.push('/') } >Go to home</button>
-  </Fragment>
-  )
-  };
   
  */
