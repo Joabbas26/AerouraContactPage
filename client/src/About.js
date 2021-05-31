@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React, {useEffect, useState} from 'react';
 import './About.css';
+import Joab from './Images/JoabAvatar.png';
 import JehieliPortrait from './Images/JehieliPortrait.jpg';
 import Oculus from './Images/Oculus.jpg';
 import CityHallPark from './Images/CityHallPark.jpg';
@@ -203,6 +204,86 @@ function About() {
                     </div>
                 </div>
             </div>
+{/* New Adventurous team test section */}
+<div className="container section-ourTeam">
+	<div className="row">
+		<div className="col-md-12 col-sm-12 col-xs-12 ourTeam-hedding text-center">
+			<h1>Meet Our Team</h1>
+		</div>
+	</div>
+	<div className="row">
+		<div className="col-md-4 col-sm-4 col-xs-12">
+			<div className="row section-success ourTeam-box text-center">
+				<div className="col-md-12 section1">
+					<img src="/demo/meet01.png"/>
+				</div>
+				<div className="col-md-12 section2">
+					<p>LISA MAHETA</p><br/>
+					<h1>MARKETING</h1><br/>
+				</div>
+				<div className="col-md-12 section3">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+					</p>
+				</div>
+				<div className="col-md-12 section4">
+					<i className="fa fa-facebook-official" aria-hidden="true"></i>
+					<i className="fa fa-twitter" aria-hidden="true"></i>
+					<i className="fa fa-google-plus" aria-hidden="true"></i>
+					<i className="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div className="col-md-4 col-sm-4 col-xs-12">
+			<div className="row section-info ourTeam-box text-center">
+				<div className="col-md-12 section1">
+                <img src={Joab} alt="Joab" className="image"></img>
+				</div>
+				<div className="col-md-12 section2">
+					<p>JOHN MEKER</p><br/>
+					<h1>DESIGNER</h1><br/>
+				</div>
+				<div className="col-md-12 section3">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+					</p>
+				</div>
+				<div className="col-md-12 section4">
+					<i className="fa fa-facebook-official" aria-hidden="true"></i>
+					<i className="fa fa-twitter" aria-hidden="true"></i>
+					<i className="fa fa-google-plus" aria-hidden="true"></i>
+					<i className="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div className="col-md-4 col-sm-4 col-xs-12">
+			<div className="row section-danger ourTeam-box text-center">
+				<div className="col-md-12 section1">
+					<img src="/demo/meet03.png"/>
+				</div>
+				<div className="col-md-12 section2">
+					<p>VIN DEASEL</p><br/>
+					<h1>PRODUCTER</h1>
+				</div>
+				<div className="col-md-12 section3">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+					</p>
+				</div>
+				<div className="col-md-12 section4">
+					<i className="fa fa-facebook-official" aria-hidden="true"></i>
+					<i className="fa fa-twitter" aria-hidden="true"></i>
+					<i className="fa fa-google-plus" aria-hidden="true"></i>
+					<i className="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+            
             {/* Contact Us Section */}
             <div classame="contactUsSection">
                 <div className="row" id="contactUsRow">
