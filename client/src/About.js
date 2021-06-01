@@ -2,7 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React, {useEffect, useState} from 'react';
 import './About.css';
+import Josue from './Images/JosueAvatar.png';
 import Joab from './Images/JoabAvatar.png';
+import Luis from './Images/LuisAvatar.png';
+import Alexis from './Images/AlexisAvatar.png';
 import JehieliPortrait from './Images/JehieliPortrait.jpg';
 import Oculus from './Images/Oculus.jpg';
 import CityHallPark from './Images/CityHallPark.jpg';
@@ -127,161 +130,88 @@ function About() {
                        <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
                 </div>
+            </div>    
+{/* New Adventurous team test section */}
+<div className="adventurousTeam">
+    <div className="container">
+        <div className="row">
+            <div className="col-md-12 col-sm-12 col-xs-12 adventurousTeamTitle text-center">
+                <h1>Meet Our Team</h1>
             </div>
-            <div className="adventurousTeam">
-                <div className="adventurousTeamTitle"><h1>Our Adventurous Team</h1></div>
-                {/* Jehieli Section, portait image with text info */}
-                <div className="row" id="teamSectionRow">
-                    <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText">Josue Jehieli Bastidas</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
+        </div>
+        <div className="row">
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div className="row section-success ourTeam-box text-center">
+                    <div className="col-md-12 section1">
+                    <img src={Josue} alt="Josue" className="image"></img>
                     </div>
-                    <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <div className="col-md-12 section2">
+                        <p>Josue Bastidas</p><br/>
+                        <h4>CEO</h4>
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
-                        <img src={CityHallPark} alt="CityHallPark" className="image"></img>
-                        <p className ="imageText">City Hall Park</p>
-                    </div>
-                </div>
-                {/* Joab Section, portait image with text info */}
-                <div className="row" id="teamSectionRow">
-                    <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText">Joab Bastidas</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
-                    </div>
-                    <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    <div className="col-md-12 section3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
-                        <img src={Oculus} alt="Oculus" className="image"></img>
-                        <p className ="imageText">Oculus</p>
-                    </div>
                 </div>
-                {/* Luis Section, portait image with text info */}
-                <div className="row" id="teamSectionRow">
-                    <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText">Luis Ugalde</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div className="row section-info ourTeam-box text-center">
+                    <div className="col-md-12 section1">
+                    <img src={Joab} alt="Joab" className="image"></img>
                     </div>
-                    <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <div className="col-md-12 section2">
+                        <p>Joab Bastidas</p><br/>
+                        <h4>Frontend Developer</h4>
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
-                        <img src={BatteryPark} alt="BatteryPark" className="image"></img>
-                        <p className ="imageText">Battery Park</p>
-                    </div>
-                </div>
-                {/* Alexis Section, portait image with text info */}
-                <div className="row" id="teamSectionRow">
-                    <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText">Alexis Sanchez</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
-                    </div>
-                    <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
-                        <img src={WorldTradeCenter} alt="WorldTradeCenter" className="image"></img>
-                        <p className ="imageText">World Trade Center</p>
+                    <div className="col-md-12 section3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
                     </div>
                 </div>
             </div>
-{/* New Adventurous team test section */}
-<div className="container section-ourTeam">
-	<div className="row">
-		<div className="col-md-12 col-sm-12 col-xs-12 ourTeam-hedding text-center">
-			<h1>Meet Our Team</h1>
-		</div>
-	</div>
-	<div className="row">
-		<div className="col-md-4 col-sm-4 col-xs-12">
-			<div className="row section-success ourTeam-box text-center">
-				<div className="col-md-12 section1">
-					<img src="/demo/meet01.png"/>
-				</div>
-				<div className="col-md-12 section2">
-					<p>LISA MAHETA</p><br/>
-					<h1>MARKETING</h1><br/>
-				</div>
-				<div className="col-md-12 section3">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-					</p>
-				</div>
-				<div className="col-md-12 section4">
-					<i className="fa fa-facebook-official" aria-hidden="true"></i>
-					<i className="fa fa-twitter" aria-hidden="true"></i>
-					<i className="fa fa-google-plus" aria-hidden="true"></i>
-					<i className="fa fa-envelope" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-		<div className="col-md-4 col-sm-4 col-xs-12">
-			<div className="row section-info ourTeam-box text-center">
-				<div className="col-md-12 section1">
-                <img src={Joab} alt="Joab" className="image"></img>
-				</div>
-				<div className="col-md-12 section2">
-					<p>JOHN MEKER</p><br/>
-					<h1>DESIGNER</h1><br/>
-				</div>
-				<div className="col-md-12 section3">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-					</p>
-				</div>
-				<div className="col-md-12 section4">
-					<i className="fa fa-facebook-official" aria-hidden="true"></i>
-					<i className="fa fa-twitter" aria-hidden="true"></i>
-					<i className="fa fa-google-plus" aria-hidden="true"></i>
-					<i className="fa fa-envelope" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-		<div className="col-md-4 col-sm-4 col-xs-12">
-			<div className="row section-danger ourTeam-box text-center">
-				<div className="col-md-12 section1">
-					<img src="/demo/meet03.png"/>
-				</div>
-				<div className="col-md-12 section2">
-					<p>VIN DEASEL</p><br/>
-					<h1>PRODUCTER</h1>
-				</div>
-				<div className="col-md-12 section3">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-					</p>
-				</div>
-				<div className="col-md-12 section4">
-					<i className="fa fa-facebook-official" aria-hidden="true"></i>
-					<i className="fa fa-twitter" aria-hidden="true"></i>
-					<i className="fa fa-google-plus" aria-hidden="true"></i>
-					<i className="fa fa-envelope" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-	</div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div className="row section-danger ourTeam-box text-center">
+                    <div className="col-md-12 section1">
+                    <img src={Alexis} alt="Alexis" className="image"></img>
+                    </div>
+                    <div className="col-md-12 section2">
+                        <p>Alexis Sanchez</p><br/>
+                        <h4>Backend Developer</h4>
+                    </div>
+                    <div className="col-md-12 section3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div className="row section-danger ourTeam-box text-center">
+                    <div className="col-md-12 section1">
+                    <img src={Luis} alt="Luis" className="image"></img>
+                    </div>
+                    <div className="col-md-12 section2">
+                    <p>Luis Ugalde</p><br/>
+                    <h4>CyberSecurity</h4>
+                    </div>
+                    <div className="col-md-12 section3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
             
             {/* Contact Us Section */}
