@@ -4,8 +4,8 @@ import React, {useEffect, useState} from 'react';
 import './About.css';
 import Josue from './Images/Josue.png';
 import Joab from './Images/Joab.png';
-import Luis from './Images/Luis.png';
-import Alexis from './Images/Alexis.png';
+//import Luis from './Images/Luis.png';
+//import Alexis from './Images/Alexis.png';
 import Oculus from './Images/Oculus.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
@@ -175,7 +175,7 @@ function About() {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="row section-danger ourTeam-box text-center">
                     <div className="col-md-12 section1">
-                    <img src={Alexis} alt="Alexis" className="image"></img>
+                    <img src={Joab} alt="Alexis" className="image"></img>
                     </div>
                     <div className="col-md-12 section2">
                         <p>Alexis Sanchez</p><br/>
@@ -193,7 +193,7 @@ function About() {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="row section-danger ourTeam-box text-center">
                     <div className="col-md-12 section1">
-                    <img src={Luis} alt="Luis" className="image"></img>
+                    <img src={Joab} alt="Luis" className="image"></img>
                     </div>
                     <div className="col-md-12 section2">
                     <p>Luis Ugalde</p><br/>
