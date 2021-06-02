@@ -2,14 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React, {useEffect, useState} from 'react';
 import './About.css';
-import Josue from './Images/JosueAvatar.png';
-import Joab from './Images/JoabAvatar.png';
-import Luis from './Images/LuisAvatar.png';
-import Alexis from './Images/AlexisAvatar.png';
-import JehieliPortrait from './Images/JehieliPortrait.jpg';
+import Josue from './Images/Josue.png';
+import Joab from './Images/Joab.png';
+import Luis from './Images/Luis.png';
+import Alexis from './Images/Alexis.png';
 import Oculus from './Images/Oculus.jpg';
-import CityHallPark from './Images/CityHallPark.jpg';
-import BatteryPark from './Images/BatteryPark.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
 
