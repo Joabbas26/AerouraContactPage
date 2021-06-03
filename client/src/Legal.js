@@ -1,5 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import WebFont from 'webfontloader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FaArrowCircleUp} from 'react-icons/fa';
 import "./Legal.css";
 
 export default function Legal() {
@@ -12,6 +14,29 @@ export default function Legal() {
           }
         });
        }, []);
+
+      
+     //Scroll to top button
+     const [showScroll, setShowScroll] = useState(false)
+ 
+     useEffect(()=>{
+       window.addEventListener('scroll', checkScrollTop)
+       return function cleanup() {
+         window.removeEventListener('scroll', checkScrollTop)
+       }
+     })
+   
+     const checkScrollTop = () => {
+       if (!showScroll && window.pageYOffset > 500){
+         setShowScroll(true)
+       } else if (showScroll && window.pageYOffset <= 500){
+         setShowScroll(false)
+       }
+     };
+   
+     const scrollTop = () =>{
+       window.scrollTo({top: 0, behavior: 'smooth'});
+     };
 
        
     return (
@@ -120,7 +145,8 @@ export default function Legal() {
             decisions about sharing your personal information with us. </p>
 
        </div>
-
+          {/* Scroll to top button */}
+        <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, width: 100, display: showScroll ? 'flex' : 'none'}}/>
     </div>
     )
 }
