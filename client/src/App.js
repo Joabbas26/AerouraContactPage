@@ -30,9 +30,7 @@ function App() {
 
   return (
 
-  <BrowserRouter
-  basename={'/'}
-  forceRefresh={true}>
+  <BrowserRouter>
 
     <div className="App">
 
@@ -43,7 +41,7 @@ function App() {
         {/* Contains website data in multiple routes */}
           <Switch>
     
-          
+          <Route exact path = "/" component={Home}/>
             
             <Route path="/about" component={About}/> 
 
@@ -51,10 +49,9 @@ function App() {
             
             <Route path="/legal" component={Legal} />
 
-            {/* 404 page get rendered */}
-            {/* <Route component={Error}/> */}
+            {/* page get rendered first */}
+            <Route component={Home}/>
             
-            <Route path = "/" exact component={Home}/>
 
             {/* <Route path="/community" component={Community} /> */}
 
@@ -75,16 +72,8 @@ export default App;
 
 ============ Test =============
 
- <Route
-  exact={true}
-  path={'/'}
-  component={Home}
-/>
 
-<BrowserRouter
-  basename={'/'}
-  forceRefresh={true}
->
+
 
 
  */
