@@ -52,7 +52,8 @@ function App() {
             {/* page get rendered first */}
             <Route component={Home}/>
             
-
+            {/* Might not work as intended */}
+            <Route component={Error}/>
             {/* <Route path="/community" component={Community} /> */}
 
           </Switch>
