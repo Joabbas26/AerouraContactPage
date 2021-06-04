@@ -8,11 +8,10 @@ import { Link, NavLink } from 'react-router-dom';
 export default function Nav() {
 
        // Set and change languages
-       const { i18n, t } = useTranslation();
-       const [currentLanguage, setCurrentLanguage] = useState('en');
+       const { t, i18n } = useTranslation();
    
-       const changeLanguage = (lang) => {
-         setCurrentLanguage(i18n.changeLanguage(lang));
+       function handleClick(lang) {
+         i18n.changeLanguage(lang);
        }
    
         // Used to hide dropdown on outside click
@@ -73,8 +72,8 @@ export default function Nav() {
         {/* Dropdown Menu content */}
             {showDropDown ?
             <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-                <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
-                <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
+                <a className="dropdown-item" onClick={() => handleClick('en')}>English</a>
+                <a className="dropdown-item" onClick={() => handleClick('es')}>Spanish</a>
             </div> 
             : null}
         </div>
