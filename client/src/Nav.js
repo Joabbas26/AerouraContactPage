@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import './Nav.css';
+import i18n from "./i18n";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -56,8 +57,8 @@ export default function Nav() {
             >AEROURA TRAVEL</NavLink>
         </span>
             <ul className="navbar-nav">
-            <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
-            <li className="nav-item"><Link to="/contact" style={{textDecoration: 'none'}}>Contact</Link></li>
+            <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>{t('About')}</Link></li>
+            <li className="nav-item"><Link to="/contact" style={{textDecoration: 'none'}}>{t('Contact')}</Link></li>
             {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
             
         </ul>
@@ -72,8 +73,8 @@ export default function Nav() {
         {/* Dropdown Menu content */}
             {showDropDown ?
             <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-                <a className="dropdown-item" onClick={() => handleClick('en')}>English</a>
-                <a className="dropdown-item" onClick={() => handleClick('es')}>Spanish</a>
+                <button className="dropdown-item" onClick={() => handleClick('en')}>English</button>
+                <button className="dropdown-item" onClick={() => handleClick('es')}>Spanish</button>
             </div> 
             : null}
         </div>

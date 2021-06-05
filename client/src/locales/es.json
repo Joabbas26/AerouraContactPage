@@ -1,4 +1,5 @@
 {
+	"About": "Acerca De",
 	"about.contactForm.contact": "Comuníquese con Nosotros",
 	"about.contactForm.head": "Comuníquese con Nosotros",
 	"about.contactForm.specialist": "Llame a un Especialista",
@@ -22,6 +23,7 @@
 	"about.values.service": "Servicio",
 	"about.visionHead": "Visión",
 	"about.visionMessage": "Todas las personas se sienten empotreradas a través de la tecnología en viajes y servicios globales.",
+	"Contact": "Contactar",
 	"descriptionBoxes.days": "Lunes, Miércoles, Viernes",
 	"descriptionBoxes.schedule": "Agendar una Cita",
 	"descriptionBoxes.travelCounselor": "Consejero de Viajes ",
