@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCogs, faStar, faCommentDots, faMap, faBell, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React, {useEffect, useState} from 'react';
 import './About.css';
 import Josue from './Images/Josue.png';

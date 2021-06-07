@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import WebFont from 'webfontloader';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {FaArrowCircleUp} from 'react-icons/fa';
 import "./Legal.css";
 

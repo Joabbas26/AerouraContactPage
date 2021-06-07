@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import "./Home.css"
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,6 @@ import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
 import TimeSquare from './Images/TimeSquare.jpg';
-import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 
 
@@ -17,11 +16,6 @@ function Home() {
  
  // Set and change languages
  const { i18n, t } = useTranslation();
- const [currentLanguage, setCurrentLanguage] = useState('en');
-
- const changeLanguage = (lang) => {
-   setCurrentLanguage(i18n.changeLanguage(lang));
- }
 
      /* Open and close side panel */
      const [isActive, setIsActive] = useState(true);

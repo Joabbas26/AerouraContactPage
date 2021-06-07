@@ -1,6 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react';
 import './Nav.css';
-import i18n from "./i18n";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -10,10 +9,10 @@ export default function Nav() {
 
        // Set and change languages
        const { t, i18n } = useTranslation();
-   
-       function handleClick(lang) {
-         i18n.changeLanguage(lang);
-       }
+
+       function updateLanguage (lang) {
+        i18n.changeLanguage(lang);  
+   }
    
         // Used to hide dropdown on outside click
         const myRef = useRef();
@@ -73,13 +72,14 @@ export default function Nav() {
         {/* Dropdown Menu content */}
             {showDropDown ?
             <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-                <button className="dropdown-item" onClick={() => handleClick('en')}>English</button>
-                <button className="dropdown-item" onClick={() => handleClick('es')}>Spanish</button>
+                <button className="dropdown-item" onClick={()=>updateLanguage("en")}>English</button>
+                <button className="dropdown-item" onClick={()=>updateLanguage("es")}>Spanish</button>
             </div> 
             : null}
         </div>
             
         </div>
+        
         </nav>
     </div>
     )
