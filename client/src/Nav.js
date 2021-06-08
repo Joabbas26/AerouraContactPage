@@ -6,16 +6,24 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Nav() {
-
-       // Set and change languages
-       const { t, i18n } = useTranslation();
-
-       function updateLanguage (lang) {
-        i18n.changeLanguage(lang);  
-   }
    
-        // Used to hide dropdown on outside click
-        const myRef = useRef();
+    //useState for hamburger menu
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+    
+    // useState for dropdown menu
+    const [showDropDown, setShowDropDown] = useState(false);
+    const handleShowDropDown = () => setShowDropDown(!showDropDown);
+
+     // Set and change languages
+     const { t, i18n } = useTranslation();
+
+     function updateLanguage (lang) {
+        i18n.changeLanguage(lang);
+      }
+    
+    // Used to hide dropdown on outside click
+       const myRef = useRef();
    
         const handleClickOutside = e => {
             if (!myRef.current.contains(e.target)) {
@@ -26,17 +34,9 @@ export default function Nav() {
         useEffect(() => {
             document.addEventListener('mousedown', handleClickOutside);
             return () => document.removeEventListener('mousedown', handleClickOutside);
+            
         });
      
-   
-     //useState for hamburger menu
-     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-     
-     // useState for dropdown menu
-     const [showDropDown, setShowDropDown] = useState(false);
-     const handleShowDropDown = () => setShowDropDown(!showDropDown);
-
 
     return (
     <div className="navSection">
@@ -72,8 +72,8 @@ export default function Nav() {
         {/* Dropdown Menu content */}
             {showDropDown ?
             <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-                <button className="dropdown-item" onClick={()=>updateLanguage("en")}>English</button>
-                <button className="dropdown-item" onClick={()=>updateLanguage("es")}>Spanish</button>
+                <button className="dropdown-item" onClick={()=> updateLanguage('en')}>English</button>
+                <button className="dropdown-item" onClick={()=> updateLanguage('es')}>Spanish</button>
             </div> 
             : null}
         </div>
@@ -84,3 +84,13 @@ export default function Nav() {
     </div>
     )
 }
+
+/*
+
+
+
+    
+    
+   
+
+ */
