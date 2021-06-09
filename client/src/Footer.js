@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import "./Footer.css";
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import { useTranslation } from "react-i18next";
 
-export default class Footer extends Component {
+function Footer () {
   
-    render() {
+      const { i18n, t } = useTranslation();
         return (
     <div className="main-footer">
         <div className="container-fluid">
@@ -35,7 +36,7 @@ export default class Footer extends Component {
     </div>
         )
     }
-}
+export default Footer
 
 /*
 

@@ -9,8 +9,12 @@ import Joab from './Images/Joab.png';
 import Oculus from './Images/Oculus.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
+import { useTranslation } from "react-i18next";
 
 function About() {
+
+    //To call json files to translate
+    const { i18n, t } = useTranslation();
 
         /* Open and close side panel */
         const [isActive, setIsActive] = useState(true);
@@ -70,15 +74,15 @@ function About() {
             <div className="aboutLandingPage">
                 <div className="aboutText">
                     <p className="aboutTitle">
-                        At Aeroua Travel, we believe in empowering individuals through global services
-                        and travel, so that we can learn from each other; by sharing ideas.</p>
+                        {t(`about.landingPageTitle`)}
+                    </p>
                 </div>
             </div>
             {/* Vision Section, text and image */}
             <div className="row" id="visionRow">
                 <div className="col-md-9" id="visionText">
-                    <p className="visionHead">Vision</p>
-                    <p className="visionSubHead"h4>All people feels empowered through technology in global service and travel.</p>
+                    <p className="visionHead">{t(`about.visionHead`)}</p>
+                    <p className="visionSubHead">{t(`about.visionMessage`)}</p>
                 </div>
                 <div className="col-md-3" id="visionImageDiv">
                     <img src={WorldTradeCenter} alt="WorldTradeCenter" className="visionImage"></img>
@@ -90,41 +94,41 @@ function About() {
                     <img src={Oculus} alt="Oculus" className="missionImage"></img>
                 </div>
                 <div className="col-md-9" id="missionText">
-                    <p className="missionHead">Mission</p>
-                    <p className="missionSubHead"h4>To provide friendly quality service to travelers seeking cultural experiences.</p>
+                    <p className="missionHead">{t(`about.missionHead`)}</p>
+                    <p className="missionSubHead">{t(`about.missionMessage`)}</p>
                 </div>
             </div>
             {/* Values Section top row */}
             <div className="ourValues">
-                <h3>Our Values</h3>
+                <h3>{t(`about.values.head`)}</h3>
                 <div className="row" id="values1">
                     {/* 'Resourcefulness' with icon */}
                     <div className="col-md-4">
-                       <h4><FontAwesomeIcon icon={faCogs} style={{ color: 'rgb(19, 143, 137)' }} /> Resourcefulness</h4>
-                       <p>We may not always have the answer, but we are committed to finding it.</p>
+                       <h4><FontAwesomeIcon icon={faCogs} style={{ color: 'rgb(19, 143, 137)' }} /> {t(`about.values.resource`)}</h4>
+                       <p>{t(`about.values.resourceText`)}</p>
                     </div>
                     {/* 'Honesty' with icon */}
                     <div className="col-md-4">
-                        <h4><FontAwesomeIcon icon={faStar} style={{ color: 'rgb(19, 143, 137)' }} /> Honesty</h4>
-                       <p>We stand by the truth and what is best for our customers, even if it may cost us business.</p>
+                        <h4><FontAwesomeIcon icon={faStar} style={{ color: 'rgb(19, 143, 137)' }} />{t(`about.values.honesty`)}</h4>
+                       <p>{t(`about.values.honestyText`)}</p>
                     </div>
                     {/* 'Communication' with icon */}
                     <div className="col-md-4">
-                        <h4><FontAwesomeIcon icon={faCommentDots} style={{ color: 'rgb(19, 143, 137)' }} /> Communication</h4>
-                       <p>Communication is clear and concise, and always necessary throughout.</p>
+                        <h4><FontAwesomeIcon icon={faCommentDots} style={{ color: 'rgb(19, 143, 137)' }} /> {t(`about.values.communication`)}</h4>
+                       <p>{t(`about.values.communicationText`)}</p>
                     </div>
                 </div>
                 {/* Values Section bottom row */}
                 <div className="row" id="values2">
                     {/* 'Planning' with icon */}
                     <div className="col-md-4">
-                       <h4><FontAwesomeIcon icon={faMap} style={{ color: 'rgb(19, 143, 137)' }} /> Planning</h4>
-                       <p>We may not always have the answer, but we are committed to finding it.</p>
+                       <h4><FontAwesomeIcon icon={faMap} style={{ color: 'rgb(19, 143, 137)' }} /> {t(`about.values.planning`)}</h4>
+                       <p>{t(`about.values.planningText`)}</p>
                     </div>
                     {/* 'Service' with icon */}
                     <div className="col-md-4">
-                        <h4><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} /> Service</h4>
-                       <p>We may not always have the answer, but we are committed to finding it.</p>
+                        <h4><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} />{t(`about.values.service`)}</h4>
+                       <p>{t(`about.values.serviceText`)}</p>
                     </div>
                 </div>
             </div>    
@@ -133,7 +137,7 @@ function About() {
     <div className="container">
         <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12 adventurousTeamTitle text-center">
-                <h1>Meet Our Team</h1>
+                <h1>{t(`about.team.head`)}</h1>
             </div>
         </div>
         <div className="row">
@@ -147,10 +151,7 @@ function About() {
                         <h4>CEO</h4>
                     </div>
                     <div className="col-md-12 section3">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
+                        <p>{t(`about.team.teamText1`)}</p>
                     </div>
                 </div>
             </div>
@@ -164,10 +165,7 @@ function About() {
                         <h4>Frontend Developer</h4>
                     </div>
                     <div className="col-md-12 section3">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
+                    <p>{t(`about.team.teamText2`)}</p>
                     </div>
                 </div>
             </div>
@@ -182,10 +180,7 @@ function About() {
                         <h4>Backend Developer</h4>
                     </div>
                     <div className="col-md-12 section3">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
+                    <p>{t(`about.team.teamText3`)}</p>
                     </div>
                 </div>
             </div>
@@ -200,10 +195,7 @@ function About() {
                     <h4>CyberSecurity</h4>
                     </div>
                     <div className="col-md-12 section3">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
+                    <p>{t(`about.team.teamText4`)}</p>
                     </div>
                 </div>
             </div>
@@ -215,55 +207,53 @@ function About() {
             <div classame="contactUsSection">
                 <div className="row" id="contactUsRow">
                     <div className="col-md-7">
-                        <h2>Reach Out To Us</h2>
-                        <h4>We love to hear from travelers and share their stories together. 
-                            We get back to you within 24 hours.
-                        </h4>
+                        <h2>{t(`about.contactForm.head`)}</h2>
+                        <h4>{t(`about.contactForm.subHead`)}</h4>
                         {/* Contact us form Section */}
                         <div className="contactUs">
-                            <h4>Contact Us</h4>
+                            <h4>{t(`about.contactForm.contact`)}</h4>
                             <hr></hr>
-                            <p>Fields Marked * are required</p>
+                            <p>{t(`virtualHoursForm.required`)}</p>
                             {/* Form for anyone to contact the company */}
                             <form className = "contactUsForm">
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
-                                        <label for="firstName">First name</label>
+                                        <label for="firstName">{t(`virtualHoursForm.FName`)}</label>
                                         <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Email*</label>
+                                        <label for="email">{t(`virtualHoursForm.email`)}*</label>
                                         <input type="email" className="form-control" id="email" placeholder="example@example.com"/>
                                     </div>
                                 </div>
                                 <div className="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="QuestionsOrConcerns">Subject*</label>
+                                        <label for="QuestionsOrConcerns">{t(`contactForm.subject`)}*</label>
                                         <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
                                         </textarea>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
+                                <button type="submit" className="btn btn-primary">{t(`contactForm.submit`)}</button>
                             </form>
                         </div>
                         {/* Virtual Hours Section */}
                         <div className="row" id="virtualHoursSection">
                             <div className="col-md-6 p-0">
                                 <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
-                                <h3>Virtual Hours (EST)</h3>
+                                <h3>{t(`descriptionBoxes.virtualHours`)} (EST)</h3>
                                 <div className="table-responsive">
                                     <table className="table">
                                         <tbody>
                                             <tr>
-                                                <td>Monday</td>
+                                                <td>{t(`descriptionBoxes.monday`)}</td>
                                                 <td>11 am - 2pm</td>
                                             </tr>
                                             <tr>
-                                                <td>Wednesday</td>
+                                                <td>{t(`descriptionBoxes.wednesday`)}</td>
                                                 <td>11 am - 2pm</td>
                                             </tr>
                                             <tr>
-                                                <td>Friday</td>
+                                                <td>{t(`descriptionBoxes.friday`)}</td>
                                                 <td>11 am - 2pm</td>
                                             </tr>
                                         </tbody>
@@ -273,9 +263,9 @@ function About() {
                             {/* Call Specialist Section */}
                             <div className="col-md-6" id="callSpecialist">
                                 <FontAwesomeIcon icon={faPhoneAlt} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
-                                <h3>Call a Specialist</h3>
+                                <h3>{t(`about.contactForm.specialist`)}</h3>
                                 <p className="phoneNumber">1-800-###-####</p>
-                                <p>Call toll free until 2pm EST</p>
+                                <p>{t('about.contactForm.tollFree')}</p>
                             </div>
                         </div>
                     </div>
@@ -291,3 +281,8 @@ function About() {
 export default About
 
 
+/*
+
+{t(``)}
+
+*/
