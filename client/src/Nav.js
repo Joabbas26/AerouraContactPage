@@ -29,7 +29,7 @@ export default function Nav() {
             if (!myRef.current.contains(e.target)) {
               setShowDropDown(false);
             }
-        };
+        }
     
         useEffect(() => {
             document.addEventListener('mousedown', handleClickOutside);
@@ -88,9 +88,5 @@ export default function Nav() {
 /*
 
 
-
-    
-    
-   
 
  */
