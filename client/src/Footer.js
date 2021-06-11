@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import "./Footer.css";
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 
 function Footer () {
   
-      const { i18n, t } = useTranslation();
+     // const { i18n, t } = useTranslation();
         return (
     <div className="main-footer">
         <div className="container-fluid">

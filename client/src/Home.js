@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 function Home() {
  
  // Set and change languages
- const { i18n, t } = useTranslation();
+ const { t } = useTranslation();
 
      /* Open and close side panel */
      const [isActive, setIsActive] = useState(true);
@@ -189,13 +189,13 @@ function Home() {
                                 </div>
                                 {/* Form checkboxes */}
                                 <div className="form-group">
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
+                                    <div className="form-check-inline">
+                                        <label className="form-check-label">
                                             <input type="checkbox" className="form-check-input" value=""/>Flight
                                         </label>
                                     </div>
                                     <div className="form-check-inline">
-                                        <label class="form-check-label">
+                                        <label className="form-check-label">
                                             <input type="checkbox" className="form-check-input" value=""/>Tour
                                         </label>
                                     </div>

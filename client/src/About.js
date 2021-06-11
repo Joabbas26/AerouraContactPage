@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next";
 function About() {
 
     //To call json files to translate
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
         /* Open and close side panel */
         const [isActive, setIsActive] = useState(true);
@@ -218,17 +218,17 @@ function About() {
                             <form className = "contactUsForm">
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
-                                        <label for="firstName">{t(`virtualHoursForm.FName`)}</label>
+                                        <label htmlFor="firstName">{t(`virtualHoursForm.FName`)}</label>
                                         <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">{t(`virtualHoursForm.email`)}*</label>
+                                        <label htmlFor="email">{t(`virtualHoursForm.email`)}*</label>
                                         <input type="email" className="form-control" id="email" placeholder="example@example.com"/>
                                     </div>
                                 </div>
                                 <div className="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="QuestionsOrConcerns">{t(`contactForm.subject`)}*</label>
+                                        <label htmlFor="QuestionsOrConcerns">{t(`contactForm.subject`)}*</label>
                                         <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
                                         </textarea>
                                     </div>
