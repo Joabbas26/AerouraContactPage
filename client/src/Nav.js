@@ -88,5 +88,22 @@ export default function Nav() {
 /*
 
 
+    Open and close side panel 
+const [isActive, setIsActive] = useState(true);
+    Toggle the icon bar
+const [dropDownSyle, setDropDownSyle] = useState({});
+const handleShowDropDown = () => {
+     
+    if (isActive === true) {
+        setDropDownSyle({visibility: "hidden"});
+    }
+    else {  
+        setDropDownSyle({visibility: "block"});
+    }
+    setIsActive(!isActive);
+}
+
+<div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu" style={dropDownSyle}>
+style={dropDownSyle}
 
  */
