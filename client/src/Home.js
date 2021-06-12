@@ -133,7 +133,7 @@ function Home() {
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
                         {/* Section with slideshows */}
                         <div className="PlacesToSee">
-                            <h4>Places to See - NYC</h4>
+                            <h4>{t('landing.page.subtitle')} - NYC</h4>
                             <div className="carousel" data-ride="carousel">
                                 {/* Image slideshows */}
                                 <div className="carousel-inner">
@@ -168,12 +168,12 @@ function Home() {
                         {/* Travel counselor contact info */}
                         <div id="TravelCounselor">
                             <div className="ContactInfo">
-                                <h1>Travel Advisor</h1>
+                                <h1>{t('descriptionBoxes.travelCounselor')}</h1>
                                 <p>Connect with an advisor to plan your next trip</p>
                                 <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                 <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
                                 <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={event => window.location.href='/contact'}
-                                >Schedule an Appointment</button>
+                                >{t('descriptionBoxes.schedule')}</button>
                             </div>
                         </div>
                     </div>
@@ -240,16 +240,16 @@ function Home() {
 
             {/* Specialization Boxes Section */}
             <div className="SpecializeBoxes">
-                <h3 className="headingText">We Specialize In...</h3>
+                <h3 className="headingText">{t('specialize.title')}</h3>
                 <div className="row">
                     {/* Local travel specialization */}
                     <div className="col-md-4">
-                       <h4 className="headingText">Local Travel</h4> 
+                       <h4 className="headingText">{t('specialize.local')}</h4> 
                        <div className="box">
                         <img src={BrooklynBridge} alt="BrooklynBridge" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p>Relax and Enjoy. There's not much else to it and we're just fine with that.</p>
-                                <p>A trip for the entire family or a solo adventure is just around the corner.</p>
+                                <p>{t('specialize.description1')}</p>
+                                <p>{t('specialize.Subdescription1')}</p>
                             </div>
                         </div>
                     </div>
@@ -259,8 +259,8 @@ function Home() {
                         <div className="box">
                         <img src={Macys} alt="Macys" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p>There's magic in planning and we can't get enough of it.</p>
-                                <p>We enjoy planning your vacation, weekend Getaways, and family retreats.</p>
+                                <p>{t('specialize.description2')}</p>
+                                <p>{t('specialize.Subdescription2')}</p>
                             </div>
                         </div>
                     </div>
@@ -270,8 +270,8 @@ function Home() {
                         <div className="box">
                         <img src={BroadwayStreet} alt="BroadwayStreet" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p>The best and brightest come to New York. There's no place like it so reach out to us to get the ins-and-outs of our booming city.</p>
-                                <p>We love it and we know you will too.</p>
+                                <p>{t('specialize.description3')}</p>
+                                <p>{t('specialize.Subdescription3')}</p>
                             </div>
                         </div>
                     </div>
