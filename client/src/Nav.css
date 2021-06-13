@@ -54,3 +54,16 @@ nav a:hover {
 .btn:focus {
     box-shadow: none !important;
 }
+
+@media only screen and (max-width: 425px){
+    .navbar-nav {
+        position: relative;
+        left: 5%;
+    }
+    
+    /* Main Dropdown Section*/
+    .dropdownSection {
+        position: relative;
+        left: 2%;
+    }
+}
