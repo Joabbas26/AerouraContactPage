@@ -47,7 +47,8 @@ nav a:hover {
     right: 10;
     z-index: 2;
     background-color: white;
-    margin-right: 15%;    
+    margin-right: 15%;   
+    display: none; 
 }
 
 /* Removes blue bur after dropdown button click */

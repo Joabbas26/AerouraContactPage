@@ -10,16 +10,27 @@ export default function Nav() {
     //useState for hamburger menu
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-    
-    // useState for dropdown menu
-    const [showDropDown, setShowDropDown] = useState(false);
-    const handleShowDropDown = () => setShowDropDown(!showDropDown);
+
+    const [isActive, setisActive] = useState(true);
+    const [dropDownSyle, setDropDownSyle] = useState({});
+    //Opens and closes dropdown menu
+    const ShowDropDown = () => { 
+        if (isActive === true) {
+            setDropDownSyle({display: "none"});
+        }
+        else {  
+            setDropDownSyle({display: "block"});
+        }
+        setisActive(!isActive);
+    }
 
      // Set and change languages
      const { t, i18n } = useTranslation();
 
      function updateLanguage (lang) {
         i18n.changeLanguage(lang);
+        //Closes dropdown menu after language selection
+        setDropDownSyle({display: "none"});
       }
     
     // Used to hide dropdown on outside click
@@ -27,7 +38,7 @@ export default function Nav() {
    
         const handleClickOutside = e => {
             if (!myRef.current.contains(e.target)) {
-              setShowDropDown(false);
+              setisActive(false);
             }
         }
     
@@ -61,21 +72,20 @@ export default function Nav() {
             {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
             
         </ul>
+        
 
         {/* Dropdown section */}
         <div className="dropdownSection">
         {/* Icon that handles Dropdown */}
             <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
-            onClick={handleShowDropDown} aria-expanded="false" ref={myRef}>
+            onClick={ShowDropDown} aria-expanded="false" ref={myRef}>
             <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} id="icon" />
             </button>
         {/* Dropdown Menu content */}
-            {showDropDown ?
-            <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
+            <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu" style={dropDownSyle}>
                 <button className="dropdown-item" onClick={()=> updateLanguage('en')}>English</button>
                 <button className="dropdown-item" onClick={()=> updateLanguage('es')}>Spanish</button>
             </div> 
-            : null}
         </div>
             
         </div>
@@ -88,22 +98,23 @@ export default function Nav() {
 /*
 
 
-    Open and close side panel 
-const [isActive, setIsActive] = useState(true);
-    Toggle the icon bar
-const [dropDownSyle, setDropDownSyle] = useState({});
-const handleShowDropDown = () => {
-     
-    if (isActive === true) {
-        setDropDownSyle({visibility: "hidden"});
-    }
-    else {  
-        setDropDownSyle({visibility: "block"});
-    }
-    setIsActive(!isActive);
-}
+    ======useState for dropdown menu
+    const [showDropDown, setShowDropDown] = useState(false);
+    const handleShowDropDown = () => setShowDropDown(!showDropDown);
 
-<div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu" style={dropDownSyle}>
-style={dropDownSyle}
+====== Dropdown section 
+<div className="dropdownSection">
+===== Icon that handles Dropdown 
+    <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
+    onClick={handleShowDropDown} aria-expanded="false" ref={myRef}>
+    <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} id="icon" />
+    </button>
+======Dropdown Menu content
+    {showDropDown ?
+    <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
+        <button className="dropdown-item" onClick={()=> updateLanguage('en')}>English</button>
+        <button className="dropdown-item" onClick={()=> updateLanguage('es')}>Spanish</button>
+    </div> 
+    : null}
 
  */
