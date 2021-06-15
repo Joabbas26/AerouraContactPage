@@ -228,12 +228,12 @@ function About() {
                                 </div>
                                 <div className="form-row">
                                     <div class="form-group col-md-10">
-                                        <label htmlFor="QuestionsOrConcerns">{t(`contactForm.subject`)}*</label>
+                                        <label htmlFor="QuestionsOrConcerns">{t(`about.contactForm.subject`)}*</label>
                                         <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
                                         </textarea>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-primary">{t(`contactForm.submit`)}</button>
+                                <button type="submit" className="btn btn-primary">{t(`about.contactForm.submit`)}</button>
                             </form>
                         </div>
                         {/* Virtual Hours Section */}

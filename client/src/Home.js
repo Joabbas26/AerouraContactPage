@@ -169,7 +169,7 @@ function Home() {
                         <div id="TravelCounselor">
                             <div className="ContactInfo">
                                 <h1>{t('descriptionBoxes.travelCounselor')}</h1>
-                                <p>Connect with an advisor to plan your next trip</p>
+                                <p>{t('descriptionBoxes.advisor')}</p>
                                 <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                 <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
                                 <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={event => window.location.href='/contact'}
@@ -184,44 +184,44 @@ function Home() {
                             <form className="planYourTrip">
                                 {/* Form description */}
                                 <div className="Title">
-                                    <h2 className="TitleIcon">Plan Your Trip</h2>
-                                    <p className="TitleText">What would your next vacation look like?</p>
+                                    <h2 className="TitleIcon">{t('voyage.title')}</h2>
+                                    <p className="TitleText">{t('voyage.subtitle')}</p>
                                 </div>
                                 {/* Form checkboxes */}
                                 <div className="form-group">
                                     <div className="form-check-inline">
                                         <label className="form-check-label">
-                                            <input type="checkbox" className="form-check-input" value=""/>Flight
+                                            <input type="checkbox" className="form-check-input" value=""/>{t('voyage.flight')}
                                         </label>
                                     </div>
                                     <div className="form-check-inline">
                                         <label className="form-check-label">
-                                            <input type="checkbox" className="form-check-input" value=""/>Tour
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <div className="form-check-inline">
-                                        <label className="form-check-label">
-                                            <input type="checkbox" className="form-check-input" value=""/>Hotel
-                                        </label>
-                                    </div>
-                                    <div className="form-check-inline">
-                                        <label className="form-check-label">
-                                            <input type="checkbox" className="form-check-input" value=""/>Other
+                                            <input type="checkbox" className="form-check-input" value=""/>{t('voyage.tour')}
                                         </label>
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <div className="form-check-inline">
                                         <label className="form-check-label">
-                                            <input type="checkbox" className="form-check-input" value=""/>Rental Car
+                                            <input type="checkbox" className="form-check-input" value=""/>{t('voyage.hotel')}
+                                        </label>
+                                    </div>
+                                    <div className="form-check-inline">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" className="form-check-input" value=""/>{t('voyage.other')}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <div className="form-check-inline">
+                                        <label className="form-check-label">
+                                            <input type="checkbox" className="form-check-input" value=""/>{t('voyage.car')}
                                         </label>
                                     </div>
                                 </div>
                                 {/* Form submit button */}
                                 <div className="joinButton">
-                                    <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>Join Here</button>
+                                    <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>{t('voyage.join')}</button>
                                 </div>
                             </form>
                         </div>
@@ -234,7 +234,7 @@ function Home() {
                 <img src={NYCTravel} alt="NYCTravel" className="travelBannerBackground">  
                 </img>
                 <div className="travelBannerText">
-                    NYC TRAVEL
+                {t('travelBanner.title')}
                 </div>
             </div>
 
@@ -255,7 +255,7 @@ function Home() {
                     </div>
                     {/* Planning trips specialization */}
                     <div className="col-md-4">
-                    <h4 className="headingText">Planning Trips</h4>
+                    <h4 className="headingText">{t('specialize.planning')}</h4>
                         <div className="box">
                         <img src={Macys} alt="Macys" className="img-fluid"></img>
                             <div className="descriptionText">
@@ -266,7 +266,7 @@ function Home() {
                     </div>
                     {/* New York city specialization */}
                     <div className="col-md-4">
-                    <h4 className="headingText">New York City</h4>
+                    <h4 className="headingText">{t('specialize.nyc')}</h4>
                         <div className="box">
                         <img src={BroadwayStreet} alt="BroadwayStreet" className="img-fluid"></img>
                             <div className="descriptionText">
