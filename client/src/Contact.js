@@ -3,9 +3,11 @@ import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import { withTranslation } from 'react-i18next';
 
 export default class Contact extends Component {
 
+    
     state={
         name:'',
         lastname:'',
@@ -90,18 +92,24 @@ export default class Contact extends Component {
         },3000)
     }
 
+    
+
     render() {
+    
+    //To call json files to translate
+    const { t } = this.props;
+
     return (
         <div className="app-contact">
         <form onSubmit={this.formSubmit} className ="scheduleTripForm">
             {/* Full Form Section */}
             <div className="virtualHours">
-                <h1>Virtual Hours</h1>
-                <p>Meet With Our Friendly Representatives via Video Chat to Plan Your Future Trips.</p>
+                <h1>{t('descriptionBoxes.virtualHours')}</h1>
+                <p>{t('virtualHoursForm.subtitle')}</p>
                 <div className="container-fluid" id="contactFormSection">
                     {/* Form video icon and description Section */}
                             <div className="videoAppointment">
-                                <p>Your Details</p>
+                                <p>{t('virtualHoursForm.details')}</p>
                                 <hr className="horizontalLine"></hr>
                                 <div className="row" id="arrangeAppointmentSection">
                                     <div className="col-xl-1 col-lg-1 col-md-2 col-sm-1 col-xs-1" id="videoIconSection">
@@ -109,11 +117,12 @@ export default class Contact extends Component {
                                     </div>
                                     <div className="col-xl-10 col-lg-10 col-md-9 col-sm-10 col-xs-10" id="videoAppointmentInfo">
                                         <span className="videoAppointmentSpan">
-                                            <p>Arrange a video appointment</p>
+                                            <p>{t('virtualHoursForm.videoAppointment')}</p>
                                         </span>
                                         <div className="row" id="appointmentRequest">
                                            <p>  <FontAwesomeIcon icon={faCheckSquare} size="2x" style={{ color: 'rgb(19, 143, 137)' }}/> 
-                                           Request your appointment and a specialist will be in touch to confirm a date and time to suit you</p>
+                                           {t('virtualHoursForm.request')}
+                                           </p>
                                         </div>
                                     </div>
                                 </div>
@@ -230,4 +239,4 @@ export default class Contact extends Component {
 }
 }
 
-
+const Con = withTranslation()(Contact);
