@@ -5,7 +5,7 @@ import {faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg
 import axios from 'axios';
 import { withTranslation } from 'react-i18next';
 
-export default class Contact extends Component {
+class Contact extends Component {
 
     
     state={
@@ -129,9 +129,9 @@ export default class Contact extends Component {
                                 {/* Prefix */}
                                     <div className="row">
                                         <div className="form-group col-md-2">
-                                            <label htmlFor="title">Title</label>
+                                            <label htmlFor="title">{t('virtualHoursForm.personTitle')}</label>
                                             <select id="title" className="form-control" style={{ backgroundColor: 'white'}}>
-                                             <option value>Choose...</option>
+                                             <option value>{t('virtualHoursForm.choose')}...</option>
                                              <option>Mr.</option>
                                              <option>Mrs.</option>
                                              <option>Ms.</option>
@@ -140,24 +140,24 @@ export default class Contact extends Component {
                                         </div>
                                         {/* First Name */}
                                         <div className="form-group col-md-3">
-                                            <label htmlFor="firstName">First Name</label>
-                                            <input type="text" className="form-control" id="firstname" placeholder="First Name"
+                                            <label htmlFor="firstName">{t('virtualHoursForm.FName')}</label>
+                                            <input type="text" className="form-control" id="firstname" placeholder={`${t('virtualHoursForm.FName')}`}
                                             value={this.state.name}
                                             onChange={this.handleName}
                                             />
                                         </div>
                                         {/* Last Name */}
                                         <div className="form-group col-md-3">
-                                            <label htmlFor="lastName">Last Name</label>
-                                            <input type="text" className="form-control" id="lastname" placeholder="Last Name"
+                                            <label htmlFor="lastName">{t('virtualHoursForm.Lname')}</label>
+                                            <input type="text" className="form-control" id="lastname" placeholder={`${t('virtualHoursForm.Lname')}`}
                                             value={this.state.lastname}
                                             onChange={this.handleLastName}
                                             />
                                         </div>
                                         {/* Email */}
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="email">Email</label>
-                                            <input type="email" className="form-control" id="email" placeholder="Email"
+                                            <label htmlFor="email">{t('virtualHoursForm.email')}</label>
+                                            <input type="email" className="form-control" id="email" placeholder={`${t('virtualHoursForm.email')}`}
                                             value={this.state.email}
                                             onChange={this.handleEmail}
                                             />
@@ -166,7 +166,7 @@ export default class Contact extends Component {
                                     {/* Phone Number */}
                                     <div className="row">
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="phoneNumber">Phone Number</label>
+                                            <label htmlFor="phoneNumber">{t('virtualHoursForm.number')}</label>
                                             <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"
                                             value={this.state.phonenumber}
                                             onChange={this.handlePhoneNumber}
@@ -174,9 +174,9 @@ export default class Contact extends Component {
                                         </div>
                                         {/* Best time to call */}
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="callTime">Best Time To Call You</label>
+                                            <label htmlFor="callTime">{t('virtualHoursForm.timeToCall')}</label>
                                             <select id="callTime" className="form-control" style={{ backgroundColor: 'white'}}>
-                                             <option value>No Preference</option>
+                                             <option value>{t('virtualHoursForm.noPreference')}</option>
                                              <option>8am</option>
                                              <option>9am</option>
                                              <option>10am</option>
@@ -192,9 +192,9 @@ export default class Contact extends Component {
                                         </div>
                                         {/* More info text field */}
                                             <div className="form-group col-md-4">
-                                                <label htmlFor="QuestionsOrConcerns">TravelPlans</label>
+                                                <label htmlFor="QuestionsOrConcerns">{t('virtualHoursForm.travelPlans')}</label>
                                                 <textarea className="form-control" id="QuestionsOrConcerns" rows="3" 
-                                                    placeholder= "E.g. Number of travelers, duration, travel dates, level of accommodations"
+                                                    placeholder= {`${t('virtualHoursForm.additionalInfo')}`}
                                                     value={this.state.message}
                                                     onChange={this.handleMessage}
                                                     >
@@ -204,19 +204,16 @@ export default class Contact extends Component {
                                     {/* Submit button */}
                                     <div className="row">
                                         <div className="col">
-                                            <button type="submit" className="submitButton btn btn-primary">Submit</button>
+                                            <button type="submit" className="submitButton btn btn-primary">{t('about.contactForm.subject')}</button>
                                         </div>
                                     </div>
                                     {/*  Line under this comment shows message only after form submit
                                     <div className={this.state.sent ? 'msg msgAppear':'msg'}>Message has been sent</div>
                                     */}
-                                    <div style={this.state.sent ? {} : { display: 'none' }}>Message has been sent</div>
+                                    <div style={this.state.sent ? {} : { display: 'none' }}>{t('vitualHoursForm.submit.message')}</div>
                                       
                                 {/* Disclaimer Section */}
-                                <div className="row"><p className="sub-text">
-                                We ask you for your number so that one of our specialists can call or text you to discuss your travel plans. 
-                                Standard rates may apply. By submitting this form, you agree to us getting in touch with you in this way.
-                                </p></div>
+                                <div className="row"><p className="sub-text">{t('virtualHoursForm.disclaimer1')}</p></div>
                                 {/* Disclaimer icon */}
                                 <div className="row" id="Disclaimer">
                                     <div className="col-md-1">
@@ -224,9 +221,7 @@ export default class Contact extends Component {
                                     </div>
                                     {/* Privacy Policy */}
                                     <div className="co-md-11">
-                                        <p>Your privacy is paramount to Aeroura Travel and we will never share your personal data with anyone.
-                                            For further info, please see our <a href="www.facebook.com">privacy policy.</a>
-                                        </p>
+                                        <p>{t('virtualHoursForm.disclaimer2')}</p>
                                     </div>
                                 </div>
                             </div>                       
@@ -239,4 +234,4 @@ export default class Contact extends Component {
 }
 }
 
-const Con = withTranslation()(Contact);
+export default withTranslation()(Contact);

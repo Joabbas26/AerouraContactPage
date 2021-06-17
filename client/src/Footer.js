@@ -2,11 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import "./Footer.css";
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function Footer () {
   
-     // const { i18n, t } = useTranslation();
+     const { i18n, t } = useTranslation();
         return (
     <div className="main-footer">
         <div className="container-fluid">
@@ -16,8 +16,8 @@ function Footer () {
               <ul className="footerList">
                 {/* Links to legal page */}
                 <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
-                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></Link>
-                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></Link>
+                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>{t('footer.privacypolicy')}</li></Link>
+                <Link to="/legal"><li style={{fontFamily: 'Karla'}}>{t('footer.terms')}</li></Link>
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
             </div>
